@@ -2,6 +2,9 @@ import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/authOperations';
 import css from './LoginForm.module.css';
 
+import email_icon from '../icons/email_icon.png';
+import password_icon from '../icons/password_icon.png';
+
 export const LoginForm = () => {
   const dispatch = useDispatch();
 
@@ -18,16 +21,27 @@ export const LoginForm = () => {
   };
 
   return (
-    <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
-      <label className={css.label}>
-        Email
-        <input type="email" name="email" />
-      </label>
-      <label className={css.label}>
-        Password
-        <input type="password" name="password" />
-      </label>
-      <button type="submit">Log In</button>
+    <form className={css.container} onSubmit={handleSubmit}>
+      <div className={css.header}>
+        <div className={css.text}>Login</div>
+        <div className={css.underline}></div>
+      </div>
+
+      <div className={css.inputContainer}>
+        <div className={css.inputDiv}>
+          <img src={email_icon} className={css.img} alt="Email icon" />
+          <input type="email" placeholder="Email" className={css.input} />
+        </div>
+
+        <div className={css.inputDiv}>
+          <img src={password_icon} className={css.img} alt="Password icon" />
+          <input type="password" placeholder="Password" className={css.input} />
+        </div>
+      </div>
+
+      <div className={css.submitContainer}>
+        <button className={css.submit} type='submit'>Login</button>
+      </div>
     </form>
   );
 };
