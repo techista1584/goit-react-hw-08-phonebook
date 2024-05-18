@@ -11,11 +11,13 @@ export const ContactListItem = ({ filteredContact }) => {
     dispatch(deleteContact(filteredContact.id));
   };
 
-  return (
+return (
     <li className={css.contactListItem}>
       <p>{filteredContact.name}:</p>
-      <p>{filteredContact.number}</p>
-      <button onClick={handleDelete}>Delete</button>
+      <p className={css.contactAlign}>{filteredContact.number}</p>
+      <button className={css.btnDelete} onClick={handleDelete}>
+        Delete
+      </button>
     </li>
   );
 };
