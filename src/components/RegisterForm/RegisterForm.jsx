@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/authOperations';
 import css from './RegisterForm.module.css';
 
-import person_icon from '../icons/email_icon.png';
+import person_icon from '../icons/person_icon.png';
 import email_icon from '../icons/email_icon.png';
 import password_icon from '../icons/password_icon.png';
 
