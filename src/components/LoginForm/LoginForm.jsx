@@ -29,13 +29,13 @@ export const LoginForm = () => {
 
       <div className={css.inputContainer}>
         <div className={css.inputDiv}>
-          <img src={email_icon} className={css.img} alt="Email icon" />
-          <input type="email" placeholder="Email" className={css.input} />
+          <img src={email_icon} className={css.img} alt="email_icon" />
+          <input type="email" name="email" placeholder="user@mail.com" className={css.input} autoComplete="email" />
         </div>
 
         <div className={css.inputDiv}>
           <img src={password_icon} className={css.img} alt="Password icon" />
-          <input type="password" placeholder="Password" className={css.input} />
+          <input type="password" name="password" placeholder="Password" className={css.input} autoComplete="current-password" />
         </div>
       </div>
 

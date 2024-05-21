@@ -20,7 +20,7 @@ export const RegisterForm = () => {
         password: form.elements.password.value,
       })
     );
-    // form.reset(); // Uncomment this line if you want to reset the form after submission
+    form.reset(); // Uncomment this line if you want to reset the form after submission
   };
 
   return (
@@ -38,12 +38,12 @@ export const RegisterForm = () => {
 
         <div className={css.inputDiv}>
           <img src={email_icon} className={css.img} alt="Email icon" />
-          <input type="email" name="email" placeholder="Email" className={css.input} />
+          <input type="email" name="email" placeholder="Email" className={css.input} autoComplete="email" />
         </div>
 
         <div className={css.inputDiv}>
           <img src={password_icon} className={css.img} alt="Password icon" />
-          <input type="password" name="password" placeholder="Password" className={css.input} />
+          <input type="password" name="password" placeholder="Password" className={css.input} autoComplete="current-password"/>
         </div>
       </div>
 
