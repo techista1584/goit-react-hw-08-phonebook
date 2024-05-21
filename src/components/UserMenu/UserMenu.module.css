@@ -7,3 +7,11 @@
 .username {
   font-weight: 700;
 }
+
+.logoutBtn{
+  color: #4c00b4;
+}
+
+.logoutBtn:hover {
+  font-weight: 600;
+}

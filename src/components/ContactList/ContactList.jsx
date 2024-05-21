@@ -6,6 +6,7 @@ import { selectFilteredContacts, selectError, selectIsLoading } from '../../redu
 import { fetchContacts } from '../../redux/contacts/contactsOperation';
 import { ContactListItem } from './ContactListItem/ContactListItem';
 import { Loader } from 'components/Loader/Loader';
+import css from './ContactList.module.css'
 
 export const ContactList = () => {
   const filteredContacts = useSelector(selectFilteredContacts);
@@ -19,7 +20,7 @@ export const ContactList = () => {
   }, [dispatch]);
 
   return (
-    <ul>
+    <ul className={css.listWrap}>
       {/* if loading and not error, show Loader */}
       {isLoading && !error && <Loader />}
 

@@ -10,8 +10,6 @@ body {
   height: 100vh;
   background: linear-gradient(#2A0057, #42006C);
   color: aliceblue;
-  display:flex;
-  justify-content:center;
 }
 
 code {

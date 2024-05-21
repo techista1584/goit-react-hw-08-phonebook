@@ -6,7 +6,7 @@ import { Footer } from 'components/Footer/Footer';
 
 export const SharedLayout = () => {
   return (
-    <div className={css.container}>
+    <div className={css.sharedContainer}>
       <Header />
       <Suspense fallback={null}>
         <Outlet />

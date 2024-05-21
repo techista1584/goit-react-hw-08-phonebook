@@ -14,11 +14,11 @@ export const Filter = () => {
 
   return (
     <div className={css.container}>
-      <p>Find Contacts by Name</p>
       <input
+        className={css.filter}
         type="text"
         name="filter"
-        placeholder="Search by name"
+        placeholder="🔎       Search by name           "
         value={filter}
         onChange={handleFilterChange}
       />

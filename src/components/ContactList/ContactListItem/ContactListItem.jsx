@@ -12,13 +12,15 @@ export const ContactListItem = ({ filteredContact }) => {
   };
 
 return (
-    <li className={css.contactListItem}>
-      <p>{filteredContact.name}:</p>
-      <p className={css.contactAlign}>{filteredContact.number}</p>
-      <button className={css.btnDelete} onClick={handleDelete}>
-        Delete
-      </button>
-    </li>
+    <div className={css.listWrap}>
+      <li className={css.contactListItem}>
+        <p>{filteredContact.name}:</p>
+        <p className={css.contactAlign}>{filteredContact.number}</p>
+        <button className={css.btnDelete} onClick={handleDelete}>
+          Delete
+        </button>
+      </li>
+    </div>
   );
 };
 
